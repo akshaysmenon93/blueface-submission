@@ -1,0 +1,20 @@
+{
+  "PROFILE": {
+    "title": "Profil",
+    "firstname": "Vorname",
+    "lastname": "Familienname, Nachname",
+    "email": "E-mail",
+    "save": "Speichern",
+    "userName": "speichern",
+    "MESSAGES": {
+      "loading": "Profil laden...",
+      "error": "Error !",
+      "save": "Profil speichern..."
+    },
+    "ERRORS": {
+      "profile": "Profil nicht gefunden",
+      "name": "Ungültiger Name",
+      "email": "Fehler beim Generieren der E-Mail"
+    }
+  }
+}

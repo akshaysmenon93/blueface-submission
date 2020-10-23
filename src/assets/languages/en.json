@@ -1,0 +1,20 @@
+{
+  "PROFILE": {
+    "title": "Profile",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "email": "E-mail",
+    "save": "Save",
+    "userName": "Username",
+    "MESSAGES": {
+      "loading": "Loading profile...",
+      "error": "Error!",
+      "save": "Saving profile..."
+    },
+    "ERRORS": {
+      "profile": "Profile not found",
+      "name": "Invalid name",
+      "email": "Error on email generation"
+    }
+  }
+}

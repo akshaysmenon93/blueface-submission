@@ -1,0 +1,21 @@
+{
+  "PROFILE": {
+    "title": "Profile",
+    "firstname": "Nombre de pila",
+    "lastname": "Apellido",
+    "save": "Salvar",
+    "email": "Correo electrónico",
+    "userName": "Nombre de usuario",
+    "MESSAGES": {
+      "loading": "Cargando perfil...",
+      "error": "Error!",
+      "email-error": "No se pudo crear el correo electrónico, inténtelo de nuevo",
+      "save": "Guardando perfil..."
+    },
+    "ERRORS": {
+      "profile": "Perfil no encontrado",
+      "name": "Nombre inválido",
+      "email": "Error al generar el correo electrónico"
+    }
+  }
+}

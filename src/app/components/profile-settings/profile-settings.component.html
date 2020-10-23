@@ -1,0 +1,85 @@
+<div class="content">
+
+
+    <div class="header">
+
+        <div class="title">
+            <h1> {{ 'PROFILE.title' | translate }} </h1>
+        </div>
+
+        <div class="language">
+
+            <label class="language__label">Language</label>
+
+            <select name="language" class="language__select"
+                (change)="changeLanguage(lang.value)" #lang>
+                <option *ngFor="let language of profileService.getLanguages() | keyvalue"
+                    [value]="language.key">
+                    {{language.value}}</option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile">
+
+        <div>
+
+            <label class="profile__form-label">
+                {{'PROFILE.userName' | translate}}:
+            </label>
+
+            <span class="profile__form-username">
+                {{profileForm.controls.username?.value}}
+            </span>
+        </div>
+
+        <form [formGroup]="profileForm" ngSubmit="saveProfile()">
+            <div formGroupName="name">
+
+                <div class="profile__form-firstname">
+                    <label class="profile__form-label">
+                        {{'PROFILE.firstname' | translate}} : </label>
+
+                    <input class="profile__form-input" type="text"
+                        formControlName="firstName" [attr.disabled]="disableInputs" />
+                </div>
+
+                <div class="profile__form-lastname">
+                    <label class="profile__form-label">
+                        {{'PROFILE.lastname' | translate}}: </label>
+                    <input class="profile__form-input" type="text"
+                        formControlName="lastName" [attr.disabled]="disableInputs" />
+                </div>
+
+            </div>
+
+            <button [disabled]="!profileForm.controls.name.valid"
+                class="profile__form-button" type="submit" (click)="saveProfile()"
+                value="{{'PROFILE.save' | translate}}"> {{'PROFILE.save' | translate}}
+            </button>
+
+            <div class="profile__form-email">
+
+                <div *ngIf="profileForm.controls.email.value">
+                    <label class="profile__form-label">{{'PROFILE.email' | translate}}
+                        :</label>
+                    <span>{{profileForm.controls.email.value}}</span>
+                </div>
+            </div>
+
+        </form>
+
+
+
+        <div class="profile__message">
+            <display-message [show]="profileForm.controls['name'].pristine"
+                [display]="displayObject">
+            </display-message>
+        </div>
+
+    </div>
+
+</div>
